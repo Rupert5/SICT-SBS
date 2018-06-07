@@ -1,0 +1,25 @@
+<div id="assistpane"><div style="display: block;text-align: center"><span id="assistant"></span></div><label id="debugTool"></label></div>
+<script>
+function currentRes(){
+    document.getElementById("debugTool").innerHTML = null;
+    debugResult(window.innerWidth + " x " + window.innerHeight);
+}
+function debugResult(text) {
+    var tool = document.getElementById("debugTool");
+
+    if (tool.innerHTML.length < 1) {
+        tool.innerHTML = text;
+        tool.style.padding = "0 1em";
+        window.setTimeout(function () {
+            tool.innerHTML = null;
+            tool.style.padding = "0";
+        }, 3000);
+    }
+}
+    
+</script>
+<style>
+    #assistpane {position: fixed; bottom: 0;width: 100%;max-height: 80px;text-align: right;z-index: 1000;}
+    #assistant {font-size: 15pt;border-radius: 7px;}
+    #debugTool {color: #0cc;background-color: rgba(0,0,0,0.9);margin: 0;transition: 1s;}
+</style>

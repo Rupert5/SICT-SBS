@@ -1,0 +1,76 @@
+/*<editor-fold desc="Bounce Back" defaultstate="collapsed">*/
+.bounceUp{text-align: center;margin: 0;padding: 0}
+.bounceUp svg,.bounceUp i{transform: rotate(180deg);animation: bounce 1s ease infinite;position: relative}
+@keyframes bounce{ from {bottom:-5px} 50% {bottom:5px} to {bottom:-5px}}
+/*</editor-fold>*/
+/*<editor-fold desc="Special Effects" defaultstate="collapsed">*/
+@-webkit-keyframes fadeinout {0%{background-color: #444; color: transparent;}}
+@keyframes fadeinout {0%{background-color: #444; color: transparent;}}
+.flash{-webkit-animation:fadeinout 6s linear backwards}
+/*</editor-fold>*/
+/*<editor-fold desc="pop-down" defaultstate="collapsed">*/
+/* Popdown container */
+.popdown {position: relative;display: inline-block;cursor: pointer;}
+/* Popdown container */
+/* The actual popdown (appears on botton) */
+.popdown .popdownpane {visibility: hidden;width: 220px;color: #444;background-color: #b1b1b1;text-align: center;border-radius: 2px;padding: 0;position: absolute;z-index: 1000;top: 125%;left: 50%;margin-left: -160px;}
+/* Popup arrow */
+.popdown .popdownpane::after { content: "";position: absolute; bottom: 100%;left: 50%; margin-left: -10px;border-width: 10px; border-style: solid; border-color: transparent transparent #444 transparent}
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popdown .show {visibility: visible;-webkit-animation: fadeIn 1s;animation: fadeIn 1s}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+@keyframes fadeIn {from {opacity: 0;} to {opacity:1 ;}}
+/*</editor-fold>*/
+/*<editor-fold desc="popup" defaultstate="collapsed">*/
+.popup{position: relative}
+/* The actual popup (appears on top) */
+.popup .popuptext {visibility: hidden;width: 160px;background-color: #5557;color: #fff;text-align: center;border-radius: 6px;padding: 8px 0;position: absolute;z-index: 1;bottom: 125%;left: 50%;margin-left: -80px;border: 1px solid #500}
+/* Popup arrow */
+.popup .error{;background-color: #5007;}
+.popup .popuptext::after {content: "";position: absolute;top: 100%;left: 50%;margin-left: -5px;border-width: 5px;border-style: solid;border-color: #555 transparent transparent transparent;}
+.popup .error::after{border-color: #500 transparent transparent transparent;}
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {visibility: visible;-webkit-animation: fadeIn 1s;animation: fadeIn 1s}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+@keyframes fadeIn {from {opacity: 0;} to {opacity:1 ;}}
+/*</editor-fold>*/
+/*<editor-fold desc="Custom Components" defaultstate="collapsed">*/
+.js,.no-display{display: none}
+button.btnMing,a.btnMing,input.btnMing{background-color: #484329;color: #ddd;text-decoration: none;min-width: 65px;line-height: 30px;display: block;border-radius: 40px;border: 1px solid #484329;transition: 1s;cursor:pointer }
+select[disabled],button[disabled],button.btnMing[disabled],button.btnMing:hover,a.btnMing:hover,input.btnMing:hover{background-color: transparent;color: #484329;transition: 3s}
+select[disabled],button[disabled],button.btnMing[disabled]{cursor: default;opacity: .4}
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button;cursor: pointer;}
+::-moz-selection{color: #b1b1b1;background-color: #444}
+::selection{color: #b1b1b1;background-color: #444}
+:focus{outline: none}
+::-moz-focus-inner{border: 0}
+
+input:required, input:invalid {box-shadow: none}
+option{color: #484329;background-color: #fff}
+select option:checked{box-shadow: 0 0 10px 100px #5a523a inset;color: #484329;-webkit-box-shadow: 0 0 10px 100px #5a523a inset;}
+
+section.error-page{padding: 1em 0 2em 0;display: flex}
+section.error-page>div{margin: 0 auto;border: 1px dotted #444;padding: .6em;position: relative}
+section.error-page>div>p{margin-bottom: .6em;color: #922}
+section.error-page>div>p.info-plus{position: absolute;top:105%;text-align: center;width: 100%;color: #444}
+section.error-page table tr td:nth-child(2n) { background-color: #efefef;}
+
+.cap {float: left;width: 0.7em;font-size: 400%;line-height: 75%;position: relative;top: 2px}
+span.success-tick{display: inline-block;font-size: 23pt;color: #91be42}
+/*<editor-fold desc="Menu Key" defaultstate="collapsed">*/
+.menu-key {display: inline-block;cursor: pointer;margin: 8px;}
+div.bar {width: 70px;height: 10px;background-color: #444;margin: 6px 0;transition: 1s;}
+/* Rotate first bar */
+.mutate div.bar1{ -webkit-transform:rotate(-25deg) translate(-18px, 3px);transform: rotate(-25deg) translate(-18px, 3px)}
+.mutate div.bar2{ opacity: 0}
+.mutate div.bar3{ -webkit-transform:rotate(25deg) translate(-16px, -16px);transform: rotate(25deg) translate(-16px, -16px)}
+/*</editor-fold>*/
+/*</editor-fold>*/
+/*<editor-fold desc="collection" defaultstate="collapsed">*/
+.shadow{box-shadow: 0 2px 14px 0 #737373;}
+.clearfix:after{content: "";display: table; clear:both}
+.pull-right{float: right}
+.pull-left{float: left}
+/*</editor-fold>*/
